@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+# Professional Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, TypeScript, Vite, and Tailwind CSS. This project showcases my work as a Product Designer, featuring a clean aesthetic, dark mode support, and smooth client-side routing.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Modern Tech Stack**: Built with React 18, TypeScript, and Vite for lightning-fast performance.
+-   **Responsive Design**: Mobile-first approach ensuring a seamless experience across all devices.
+-   **Dark Mode**: Native dark mode support using Tailwind CSS.
+-   **Component-Based**: Reusable components for consistent styling and maintainability.
+-   **Client-Side Routing**: Smooth page transitions with `react-router-dom`.
+-   **Interactive Elements**: Hover effects, micro-animations, and interactive project cards.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-   **Frontend Framework**: React
+-   **Language**: TypeScript
+-   **Build Tool**: Vite
+-   **Styling**: Tailwind CSS (v3)
+-   **Routing**: React Router DOM
+-   **Icons**: Material Symbols Outlined
 
-## Expanding the ESLint configuration
+## 📸 Screenshots
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Home Page
+The landing page featuring a hero section, expertise highlights, and recent work.
+![Home Page](screenshots/home.png)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### About Page
+A detailed "About Me" section with my journey, philosophy, experience timeline, and skills.
+![About Page](screenshots/about.png)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Projects Page
+A gallery of selected works with category filtering.
+![Projects Page](screenshots/projects.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Project Details
+An in-depth case study view for individual projects.
+![Project Details](screenshots/project_details.png)
+
+### Contact Page
+A functional contact form and social links.
+![Contact Page](screenshots/contact.png)
+
+## 🏃‍♂️ How to Run Locally
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/HemanthKumar817/Portfolio-1.git
+    cd Portfolio-1
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open your browser:**
+    Navigate to `http://localhost:5173` to view the application.
+
+## 📦 Build for Production
+
+To create a production-ready build:
+
+```bash
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This will generate static files in the `dist` directory, ready to be deployed to any static hosting service (Netlify, Vercel, GitHub Pages, etc.).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📄 License
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project is open-source and available under the [MIT License](LICENSE).
